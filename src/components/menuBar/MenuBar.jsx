@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'wouter';
 import { Menu, InfoContainer, UserContainer, ItemsContainer } from './style.js';
 
-import { FaAlignJustify, FaDog, FaUserTie, FaUser, FaUsers, FaUserCog, FaSignOutAlt } from "react-icons/fa";
+import { FaAlignJustify, FaHome, FaDog, FaUserTie, FaUser, FaUsers, FaUserCog, FaSignOutAlt } from "react-icons/fa";
 
 function MenuBar() {
 
@@ -26,83 +27,92 @@ function MenuBar() {
       </UserContainer>
 
       <ItemsContainer>
+
         <li>
-          <a href="#">
+          <Link to="/">
+            <span> <FaHome/> </span>
+            <p>Inicio</p>
+          </Link>
+          <span>Inicio</span>
+        </li>
+
+        <li>
+          <Link to="/pets">
             <span> <FaDog/> </span>
             <p>Animales</p>
-          </a>
+          </Link>
           <span>Animales</span>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="/adopters">
             <span> <FaUserTie/> </span>
             <p>Adoptantes</p>
-          </a>
+          </Link>
           <span>Adoptantes</span>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="/employees">
             <span> <FaUser/> </span>
             <p>Empleados</p>
-          </a>
+          </Link>
           <span>Empleados</span>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="/users">
             <span> <FaUsers/> </span>
             <p>Usuarios</p>
-          </a>
+          </Link>
           <span>Usuarios</span>
         </li>
 
         {/*<li>
-          <a href="#">
+          <Link to="#">
             <span>  </span>
             <p>Roles</p>
-          </a>
+          </Link>
           <span>Roles</span>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="#">
             <span>   </span>
             <p>Especies</p>
-          </a>
+          </Link>
           <span>Especies</span>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="#">
             <span>   </span>
             <p>Razas</p>
-          </a>
+          </Link>
           <span>Razas</span>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="#">
             <span></span>
             <p>Estatus</p>
-          </a>
+          </Link>
           <span>Estatus</span>
         </li>
-*/}
+      */}
         <li>
-          <a href="#">
+          <Link to="profile">
             <span> <FaUserCog/> </span>
             <p>Perfil</p>
-          </a>
+          </Link>
           <span>Perfil</span>
         </li>
 
         <li>
-          <a href="#">
+          <Link to="#">
             <span> <FaSignOutAlt/> </span>
             <p>Salir</p>
-          </a>
+          </Link>
           <span>Salir</span>
         </li>
 
