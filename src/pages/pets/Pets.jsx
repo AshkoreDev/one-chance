@@ -17,13 +17,6 @@ function Pets() {
 				<PetCard/>
 				<PetCard/>
 				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
 			</PetSection>
 		</section>
 
