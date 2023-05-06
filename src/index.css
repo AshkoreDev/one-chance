@@ -3,3 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+	width: calc(100% - 80px);
+	min-height: 100vh;
+	padding: 1rem;
+	position: relative;
+	top: 0;
+	left: 80px;
+	background: #C7E9B0;
+	transition: all 0.8s ease;
+}
+
+.active ~ main {
+	width: calc(100% - 200px);
+	left: 200px;
+}

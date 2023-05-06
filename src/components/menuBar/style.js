@@ -7,8 +7,10 @@ export const Menu = styled.section`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #222222;
-  background-color: #7C9070; //#7C9070
+  position: fixed;
+  left: 0;
+  color: #fff;
+  background-color: #263A29; //#7C9070
   transition: 0.8s;
 
   &.active {
@@ -34,7 +36,7 @@ export const InfoContainer = styled.div`
 
     .active & {
       opacity: 1;
-      transition-delay: 0.4s;
+      transition-delay: 0.5s;
     }
   }
 
@@ -55,7 +57,6 @@ export const InfoContainer = styled.div`
 
   @media (hover:hover) {
     svg:hover {
-      color: #12171e;
       cursor: pointer;
     }
 `;
@@ -86,9 +87,13 @@ export const UserContainer = styled.div`
         font-weight: 600;
       }
 
+      &:nth-child(2) {
+        letter-spacing: 1px;
+      }
+
       .active & {
         opacity: 1;
-        transition-delay: 0.4s;
+        transition-delay: 0.5s;
       }
     } 
   }
@@ -111,7 +116,7 @@ export const ItemsContainer = styled.ul`
     & a {
       display: flex;
       align-items: center;
-      color: #222222;
+      color: #fff;
       text-decoration: none;
       border-radius: 0.5rem;
 
@@ -135,7 +140,7 @@ export const ItemsContainer = styled.ul`
 
         .active & {
           opacity: 1;
-          transition-delay: 0.4s;
+          transition-delay: 0.5s;
         }
       }
     }
@@ -145,14 +150,15 @@ export const ItemsContainer = styled.ul`
       position: absolute;
       top: 50%;
       left: 130px;
-      color: #12171e;
+      color: #fff;
+      font-size: 1.1rem;
       font-weight: 500;
       line-height: 1.8rem;
       border-radius: .6rem;
       z-index: 20;
       opacity: 0;
       transform: translate(-50%, -50%);
-      background: #7AA874;
+      background: #41644A;
       box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2);
 
       .active & {
@@ -164,10 +170,7 @@ export const ItemsContainer = styled.ul`
   @media (hover:hover) {
     a:hover {
       color: #fff;
-      background: #7AA874;
-    }
-    .active p:hover {
-      transition-delay: 0s;
+      background: #41644A;
     }
     li:hover > span {
       opacity: 1;

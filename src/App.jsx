@@ -5,7 +5,8 @@ function App() {
   return (
 
     <>
-      <MenuBar />
+      <MenuBar/>
+      <main></main>
     </>
   );
 };

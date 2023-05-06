@@ -58,7 +58,7 @@ function MenuBar() {
           <span>Usuarios</span>
         </li>
 
-        <li>
+        {/*<li>
           <a href="#">
             <span>  </span>
             <p>Roles</p>
@@ -89,7 +89,7 @@ function MenuBar() {
           </a>
           <span>Estatus</span>
         </li>
-
+*/}
         <li>
           <a href="#">
             <span> <FaUserCog/> </span>
