@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-main {
+.content {
 	width: calc(100% - 80px);
 	min-height: 100vh;
 	padding: 1rem;
@@ -15,7 +15,7 @@ main {
 	transition: all 0.8s ease;
 }
 
-.active ~ main {
+.active ~ .content {
 	width: calc(100% - 200px);
 	left: 200px;
 }
