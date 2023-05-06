@@ -7,9 +7,9 @@ export const Menu = styled.section`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  // color: #fff;
+  color: #fff;
   background-color: grey;
-  transition: 0.5s;
+  transition: 0.8s;
 
   &.active {
     width: 200px;
@@ -26,30 +26,36 @@ export const InfoContainer = styled.div`
   background-color: grey;
 
   & p {
-    width: 90%;
-    display: none;
+    height: 16px;
     opacity: 0;
-    transition: 0.5s;
+    transition-delay: 0s;
 
     .active & {
-      display: block;
       opacity: 1;
-      transition-delay: 5s;
+      transition-delay: 0.3s;
     }
   }
 
   & svg {
     margin: 0 auto;
     font-size: 1.2rem;
+    position: absolute;
+    left: 30px;
+    transition: 0.5s;
+    transition-delay: 0s;
 
     .active & {
       margin: 0;
-    }
-
-    @media (hover:hover) {
-      cursor: pointer;
+      left: 160px;
+      transition-delay: 0.2s;
     }
   }
+
+  @media (hover:hover) {
+    svg:hover {
+      color: #12171e;
+      cursor: pointer;
+    }
 `;
 
 export const UserContainer = styled.div`
@@ -71,7 +77,8 @@ export const UserContainer = styled.div`
     p {
       text-align: center;
       opacity: 0;
-      transition: 0.5s;
+      // transition: 0.1s;
+      // transition-delay: 0.2s;
 
       &:nth-child(1) {
         font-size: 1.2rem;
@@ -80,7 +87,6 @@ export const UserContainer = styled.div`
 
       .active & {
         opacity: 1;
-        transition-delay: 0.2s;
       }
     } 
   }
@@ -103,8 +109,9 @@ export const ItemsContainer = styled.ul`
     & a {
       display: flex;
       align-items: center;
+      color: #fff;
       text-decoration: none;
-      border-radius: 0.8rem;
+      border-radius: 0.5rem;
 
       & span {
         min-width: 40px;
@@ -125,9 +132,36 @@ export const ItemsContainer = styled.ul`
 
         .active & {
           opacity: 1;
-          transition-delay: 0.2s;
         }
       }
+    }
+
+    & > span {
+      padding: .4rem 1.2rem;
+      position: absolute;
+      top: 50%;
+      left: 125px;
+      color: #12171e;
+      line-height: 1.8rem;
+      border-radius: .6rem;
+      z-index: 20;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2);
+
+      .active & {
+        display: none;
+      }
+    }
+  }
+
+  @media (hover:hover) {
+    a:hover {
+      color: #12171e;
+      background: #fff;
+    }
+    li:hover > span {
+      opacity: 1;
     }
   }
 `;

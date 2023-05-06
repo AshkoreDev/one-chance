@@ -31,6 +31,7 @@ function MenuBar() {
             <span> <FaDog/> </span>
             <p>Animales</p>
           </a>
+          <span>Animales</span>
         </li>
 
         <li>
@@ -38,6 +39,7 @@ function MenuBar() {
             <span> <FaUserTie/> </span>
             <p>Adoptantes</p>
           </a>
+          <span>Adoptantes</span>
         </li>
 
         <li>
@@ -45,6 +47,7 @@ function MenuBar() {
             <span> <FaUser/> </span>
             <p>Empleados</p>
           </a>
+          <span>Empleados</span>
         </li>
 
         <li>
@@ -52,6 +55,7 @@ function MenuBar() {
             <span> <FaUsers/> </span>
             <p>Usuarios</p>
           </a>
+          <span>Usuarios</span>
         </li>
 
         <li>
@@ -59,6 +63,7 @@ function MenuBar() {
             <span>  </span>
             <p>Roles</p>
           </a>
+          <span>Roles</span>
         </li>
 
         <li>
@@ -66,6 +71,7 @@ function MenuBar() {
             <span>   </span>
             <p>Especies</p>
           </a>
+          <span>Especies</span>
         </li>
 
         <li>
@@ -73,6 +79,7 @@ function MenuBar() {
             <span>   </span>
             <p>Razas</p>
           </a>
+          <span>Razas</span>
         </li>
 
         <li>
@@ -80,6 +87,7 @@ function MenuBar() {
             <span></span>
             <p>Estatus</p>
           </a>
+          <span>Estatus</span>
         </li>
 
         <li>
@@ -87,6 +95,7 @@ function MenuBar() {
             <span> <FaUserCog/> </span>
             <p>Perfil</p>
           </a>
+          <span>Perfil</span>
         </li>
 
         <li>
@@ -94,6 +103,7 @@ function MenuBar() {
             <span> <FaSignOutAlt/> </span>
             <p>Salir</p>
           </a>
+          <span>Salir</span>
         </li>
 
       </ItemsContainer>
