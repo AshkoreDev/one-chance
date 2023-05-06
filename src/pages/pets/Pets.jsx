@@ -1,5 +1,5 @@
 import { PetSection } from './Pets-style.js';
-import PetCard from './components/petCard/PetCard.jsx';
+import PetList from './components/PetList.jsx';
 import NewButton from './../../components/newButton/NewButton.jsx';
 
 
@@ -10,13 +10,7 @@ function Pets() {
 		<section className="content">
 			<NewButton title="Animales"/>
 			<PetSection>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
-				<PetCard/>
+				<PetList/>
 			</PetSection>
 		</section>
 

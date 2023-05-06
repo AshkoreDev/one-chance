@@ -1,14 +1,16 @@
 import { Card } from './PetCard-style.js';
 
-function PetCard() {
+function PetCard({ pet }) {
+
+	const { name, code } = pet;
 
 	return (
 
 		<Card>
 			<img src="" alt="" width="140" height="140"/>
 			<div>
-				<p>Julia</p>
-				<p>En proceso</p>
+				<p>{name}</p>
+				<p>{code}</p>
 				<a href="#">Detalles</a>
 			</div>
 		</Card>
