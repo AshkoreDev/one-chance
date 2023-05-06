@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { getPets } from './../services/pets.service.js';
+import Loader from './../../../components/loader/Loader.jsx';
 import PetCard from './PetCard.jsx';
 import { PetSection } from './../styles/Pets-style.js';
 
@@ -9,7 +10,8 @@ function PetList() {
 		queryKey: ['pets'],
 		queryFn: getPets
 	});
-	
+
+	console.log(data)
 	return (
 
 		<PetSection>
@@ -18,11 +20,11 @@ function PetList() {
 
 				if(isLoading) {
 
-					return <h2>Cargando...</h2>;
+					return <Loader title="Cargando"/>
 
 				} else if(isError) {
 
-					return <h2>ERROR EN LA BASE DE DATOS.</h2>;
+					return <Loader title="Error en la base de datos"/>
 
 				} else {
 

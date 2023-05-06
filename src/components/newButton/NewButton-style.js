@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const NewSection = styled.section`
-  width: 50%;
-  height: 60px;
+  width: 100%;
   margin: 0 auto 100px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  gap: 10px;
 
   & h2 {
     color: #263A29;
@@ -34,6 +35,12 @@ export const NewSection = styled.section`
     button:hover {
       cursor: pointer;
       opacity: 0.8;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    & {
+      width: 60%;
     }
   }
 `;
