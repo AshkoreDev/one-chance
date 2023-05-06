@@ -1,7 +1,5 @@
-import { PetSection } from './Pets-style.js';
 import PetList from './components/PetList.jsx';
 import NewButton from './../../components/newButton/NewButton.jsx';
-
 
 function Pets() {
 
@@ -9,9 +7,7 @@ function Pets() {
 
 		<section className="content">
 			<NewButton title="Animales"/>
-			<PetSection>
-				<PetList/>
-			</PetSection>
+			<PetList/>
 		</section>
 
 	);

@@ -1,4 +1,4 @@
-import { Card } from './PetCard-style.js';
+import { Card } from './../styles/PetCard-style.js';
 
 function PetCard({ pet }) {
 
