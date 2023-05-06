@@ -7,8 +7,8 @@ export const Menu = styled.section`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #fff;
-  background-color: grey;
+  color: #222222;
+  background-color: #7C9070; //#7C9070
   transition: 0.8s;
 
   &.active {
@@ -23,16 +23,18 @@ export const InfoContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  background-color: grey;
 
   & p {
     height: 16px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
     opacity: 0;
     transition-delay: 0s;
 
     .active & {
       opacity: 1;
-      transition-delay: 0.3s;
+      transition-delay: 0.4s;
     }
   }
 
@@ -77,8 +79,7 @@ export const UserContainer = styled.div`
     p {
       text-align: center;
       opacity: 0;
-      // transition: 0.1s;
-      // transition-delay: 0.2s;
+      transition-delay: 0s;
 
       &:nth-child(1) {
         font-size: 1.2rem;
@@ -87,6 +88,7 @@ export const UserContainer = styled.div`
 
       .active & {
         opacity: 1;
+        transition-delay: 0.4s;
       }
     } 
   }
@@ -109,7 +111,7 @@ export const ItemsContainer = styled.ul`
     & a {
       display: flex;
       align-items: center;
-      color: #fff;
+      color: #222222;
       text-decoration: none;
       border-radius: 0.5rem;
 
@@ -129,9 +131,11 @@ export const ItemsContainer = styled.ul`
         margin-left: 10px;
         font-size: 1.2rem;
         opacity: 0;
+        transition-delay: 0s;
 
         .active & {
           opacity: 1;
+          transition-delay: 0.4s;
         }
       }
     }
@@ -140,13 +144,15 @@ export const ItemsContainer = styled.ul`
       padding: .4rem 1.2rem;
       position: absolute;
       top: 50%;
-      left: 125px;
+      left: 130px;
       color: #12171e;
+      font-weight: 500;
       line-height: 1.8rem;
       border-radius: .6rem;
       z-index: 20;
       opacity: 0;
       transform: translate(-50%, -50%);
+      background: #7AA874;
       box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2);
 
       .active & {
@@ -157,8 +163,11 @@ export const ItemsContainer = styled.ul`
 
   @media (hover:hover) {
     a:hover {
-      color: #12171e;
-      background: #fff;
+      color: #fff;
+      background: #7AA874;
+    }
+    .active p:hover {
+      transition-delay: 0s;
     }
     li:hover > span {
       opacity: 1;
