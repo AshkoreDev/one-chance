@@ -11,7 +11,7 @@ function App() {
       <MenuBar/>
       
       <Switch>
-      	<Route path="/" component={Home}/>
+      	<Route path="/home" component={Home}/>
       	<Route path="/pets" component={Pets}/>
       	{/*<Route path="/adopters" component={'adopters'}/>
       	<Route path="/employees" component={'employees'}/>

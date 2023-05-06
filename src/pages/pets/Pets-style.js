@@ -5,5 +5,5 @@ export const PetSection = styled.section`
 	flex-wrap: wrap;
 	align-content: flex-start;
   justify-content: center;
-	gap: 10px;
+	gap: 20px;
 `;

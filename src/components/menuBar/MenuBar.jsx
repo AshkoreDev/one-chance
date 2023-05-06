@@ -29,7 +29,7 @@ function MenuBar() {
       <ItemsContainer>
 
         <li>
-          <Link to="/">
+          <Link to="/home">
             <span> <FaHome/> </span>
             <p>Inicio</p>
           </Link>
