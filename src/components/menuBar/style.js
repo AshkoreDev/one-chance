@@ -7,7 +7,8 @@ export const Menu = styled.section`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: lightgrey;
+  // color: #fff;
+  background-color: grey;
   transition: 0.5s;
 
   &.active {
@@ -24,60 +25,64 @@ export const InfoContainer = styled.div`
   gap: 10px;
   background-color: grey;
 
-  
-`;
+  & p {
+    width: 90%;
+    display: none;
+    opacity: 0;
+    transition: 0.5s;
 
-export const Logo = styled.p`
-  // width: 90%;
-  display: none;
-  opacity: 0;
-  transition: 0.5s;
-  // transition-delay: 10s;
+    .active & {
+      display: block;
+      opacity: 1;
+      transition-delay: 5s;
+    }
+  }
 
-  .active & {
-    display: block;
-    opacity: 1;
-    transition-delay: 5s;
+  & svg {
+    margin: 0 auto;
+    font-size: 1.2rem;
+
+    .active & {
+      margin: 0;
+    }
+
+    @media (hover:hover) {
+      cursor: pointer;
+    }
   }
 `;
 
 export const UserContainer = styled.div`
-  height: 50px;
   padding: 10px 5px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid black;
+
+  & img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+  }
 
   & div {
-    margin-left: 10px;
-    background: green;
-  }
-`;
+    margin-left: 15px;
 
-export const Image = styled.img`
-  width: 50px;
-  border-radius: 50%;
-  border: 1px solid #eee;
-`;
+    p {
+      text-align: center;
+      opacity: 0;
+      transition: 0.5s;
 
-export const Username = styled.p`
-  font-size: 1.2rem;
-  font-weight: 600;
-  opacity: 0;
-  transition: 0.5s;
+      &:nth-child(1) {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
 
-  .active & {
-    opacity: 1;
-    transition-delay: 0.2s;
-  }
-`;
-
-export const Role = styled.p`
-  opacity: 0;
-  transition: 0.5s;
-
-  .active & {
-    opacity: 1;
-    transition-delay: 0.2s;
+      .active & {
+        opacity: 1;
+        transition-delay: 0.2s;
+      }
+    } 
   }
 `;
 
@@ -87,46 +92,42 @@ export const ItemsContainer = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: grey;
-`;
 
-export const Item = styled.li`
-  width: 90%;
-  height: 40px;
-  margin: 0 auto;
-  // padding: 5px;
-  position: relative;
-  list-style: none;
-  // line-height: 50px;
-  background-color: lightgrey;
-`;
+  & li {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    list-style: none;
 
-export const Ancor = styled.a`
-  display: flex;
-  align-items: center;
-  // color: #fff;
-  text-decoration: none;
-  border-radius: 0.8rem;
-`;
+    & a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      border-radius: 0.8rem;
 
-export const AncorIcon = styled.span`
-  min-width: 40px;
-  height: 40px;
-  padding: 8px 0;
-  margin-left: 5px;
-  font-size: 1.5rem;
-  text-align: center;
-  border-radius: 12px;
-`;
+      & span {
+        min-width: 40px;
+        height: 40px;
+        padding: 8px 0;
+        margin-left: 5px;
+        font-size: 1.5rem;
+        text-align: center;
+        border-radius: 12px;
+      }
 
-export const AncorText = styled.p`
-  height: 40px;
-  padding: 8px 0;
-  margin-left: 10px;
-  opacity: 0;
+      & p {
+        height: 40px;
+        padding: 10px 0;
+        margin-left: 10px;
+        font-size: 1.2rem;
+        opacity: 0;
 
-  .active & {
-    opacity: 1;
-    transition-delay: 0.2s;
+        .active & {
+          opacity: 1;
+          transition-delay: 0.2s;
+        }
+      }
+    }
   }
 `;
