@@ -1,4 +1,5 @@
 import { Card } from './../styles/PetCard-style.js';
+import petDefault from './../../../assets/pet-default.svg';
 
 function PetCard({ pet }) {
 
@@ -7,7 +8,7 @@ function PetCard({ pet }) {
 	return (
 
 		<Card>
-			<img src="" alt="" width="140" height="140"/>
+			<img src={petDefault} alt={`${name} profile photo`} width="140" height="140"/>
 			<div>
 				<p>{name}</p>
 				<p>{petAdoptionStatus.title}</p>

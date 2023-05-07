@@ -1,21 +1,23 @@
 import styled from 'styled-components';
 
 export const Card = styled.article`
-	width: 150px;
-	height: 225px;
+	width: 130px;
+	height: 210px;
 	padding: 5px;
+	text-align: center;
 	border-radius: 8px;
 	outline: 2px solid darkgreen;
 	// background: #7C9070;
 
 	& > img {
-		width: 140px;
-		height: 140px;
+		width: 120px;
+		height: 120px;
 		border-radius: inherit;
 		background: grey;
 	}
 
 	& div {
+		margin-top: 5px;
 		text-align: center;
 		
 		& > p {
