@@ -1,9 +1,28 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { createPet } from './../services/pets.service.js';
 
 function PetModal() {
 
+	const queryClient = useQueryClient();
+
+	const addPet = useMutation({
+		mutationFn: createPet,
+		onSuccess: () => { 
+			// console.log('enviado');
+			queryClient.invalidateQueries('pets');
+		}
+	});
+
+	const handleSubmit = (e) => {
+
+		e.preventDefault();
+		const formData = new FormData(e.target);
+		const data = Object.fromEntries(formData);
+	};
+
 	return (
 
-			<div>
+			<form onSubmit={handleSubmit}>
 				<div>
 					<label htmlFor="code">Código</label>
 					<input type="text" id="code" name="code"/>
@@ -49,10 +68,12 @@ function PetModal() {
 					<input type="number" id="adoptionStatusId" name="adoptionStatusId"/>
 				</div>
 				<div>
-					<label htmlFor="active">Código</label>
-					<input type="number" id="active" name="active"/>
+					<label htmlFor="active">Activo</label>
+					<input type="text" id="active" name="active"/>
 				</div>
-			</div>
+
+				<button>Enviar</button>
+			</form>
 	);
 };
 
