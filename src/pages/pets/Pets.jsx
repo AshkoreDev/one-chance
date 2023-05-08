@@ -9,7 +9,7 @@ function Pets() {
 		<section className="content">
 			{/*<NewButton title="Animales"/>*/}
 			<PetModal/>
-			<PetList/>
+			{/*<PetList/>*/}
 		</section>
 
 	);

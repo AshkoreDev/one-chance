@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createPet } from './../services/pets.service.js';
+import { Modal, InputGroup } from './../styles/PetModal.style.js';
 
 function PetModal() {
 
@@ -22,58 +23,59 @@ function PetModal() {
 
 	return (
 
-			<form onSubmit={handleSubmit}>
-				<div>
+			<Modal onSubmit={handleSubmit}>
+				<h2>PETS</h2>
+				<InputGroup>
 					<label htmlFor="code">Código</label>
 					<input type="text" id="code" name="code"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="name">Nombre</label>
 					<input type="text" id="name" name="name"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="image">Imagen</label>
 					<input type="text" id="image" name="image"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="age">Edad</label>
 					<input type="text" id="age" name="age"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="sex">Sexo</label>
 					<input type="text" id="sex" name="sex"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="specieId">Especie</label>
 					<input type="number" id="specieId" name="specieId"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="breedId">Raza</label>
 					<input type="number" id="breedId" name="breedId"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="currentHealth">Salud</label>
 					<input type="text" id="currentHealth" name="currentHealth"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="currentMedicine">Medicina actual</label>
 					<input type="text" id="currentMedicine" name="currentMedicine"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="medicalHistory">Historia médica</label>
 					<input type="text" id="medicalHistory" name="medicalHistory"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="adoptionStatusId">Estatus</label>
 					<input type="number" id="adoptionStatusId" name="adoptionStatusId"/>
-				</div>
-				<div>
+				</InputGroup>
+				<InputGroup>
 					<label htmlFor="active">Activo</label>
 					<input type="text" id="active" name="active"/>
-				</div>
+				</InputGroup>
 
 				<button>Enviar</button>
-			</form>
+			</Modal>
 	);
 };
 
