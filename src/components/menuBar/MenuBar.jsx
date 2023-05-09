@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
-import { Menu, InfoContainer, UserContainer, ItemsContainer } from './MenuBar-style.js';
+import { Menu, InfoContainer, UserContainer, ItemsContainer } from './MenuBar.style.js';
 
 import { FaAlignJustify, FaHome, FaDog, FaUserTie, FaUser, FaUsers, FaUserCog, FaSignOutAlt } from "react-icons/fa";
 

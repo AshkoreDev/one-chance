@@ -1,5 +1,5 @@
 import { DotPulse } from '@uiball/loaders';
-import { LoaderSection } from './Loader-style.js';
+import { LoaderSection } from './Loader.style.js';
 
 function Loader({ title }) {
 

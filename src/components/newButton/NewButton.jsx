@@ -1,5 +1,5 @@
 import { FaPlus } from "react-icons/fa";
-import { NewSection } from './NewButton-style.js';
+import { NewSection } from './NewButton.style.js';
 
 function NewButton({ title }) {
 

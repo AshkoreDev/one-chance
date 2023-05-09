@@ -25,6 +25,7 @@ function PetModal() {
 		const formData = new FormData(e.target);
 		const data = Object.fromEntries(formData);
 		console.log(data);
+		addPet.mutate({ ...data, image });
 	};
 
 	const handleImage = (e) => document.getElementById('image').click(e);
