@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { FaCamera } from 'react-icons/fa';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createPet } from './../services/pets.service.js';
-import { Modal, ImageContainer, InputGroup } from './../styles/PetModal.style.js';
+import { Modal, ImageContainer, InputGroup, ButtonContainer } from './../styles/PetModal.style.js';
 
 import petDefault from './../../../assets/pet-default.svg';
 
-function PetModal() {
+function PetModal({ title, send }) {
 
 	const [image, setImage] = useState(petDefault);
+
 	const queryClient = useQueryClient();
 
 	const addPet = useMutation({
@@ -34,7 +35,7 @@ function PetModal() {
 	return (
 
 			<Modal onSubmit={handleSubmit}>
-				<h2>PETS</h2>
+				<h2>{title}</h2>
 				
 				<section>
 					<ImageContainer>
@@ -106,7 +107,16 @@ function PetModal() {
 
 				</section>
 
-				<button>Enviar</button>
+				<ButtonContainer>
+					{
+						(send)
+							? <button>Guardar</button>
+							: <>
+									<button>Modificar</button>
+									<button>Eliminar</button>
+								</>
+					}
+				</ButtonContainer>
 
 			</Modal>
 

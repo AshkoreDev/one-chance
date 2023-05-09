@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Modal = styled.form`
 	width: 300px;
-	margin: 10px auto;
+	// margin: 10px auto;
 	padding: 10px;
+	text-align: center;
 	outline: 1px solid grey;
 	border-radius: 4px;
-	text-align: center;
 
 	& > section {
 		width: 100%;
@@ -19,16 +19,6 @@ export const Modal = styled.form`
 		justify-content: space-between;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-	}
-
-	& button {
-		width: 100px;
-		height: 30px;
-		border-radius: 4px;
-
-		@media (hover:hover) {
-			cursor: pointer;
-		}
 	}
 
 	@media screen and (min-width: 768px) {
@@ -96,5 +86,32 @@ export const InputGroup = styled.div`
 		padding: 5px 10px;
 		border-radius: 4px;
 		border: 1px solid grey;
+	}
+`;
+
+export const ButtonContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	& > button {
+		width: 100px;
+		height: 30px;
+		color: #fff;
+		border: transparent;
+		outline-offset: 2px;
+		outline: 1px solid green;
+		border-radius: 4px;
+		background:  green;
+
+		&:nth-child(2) {
+			background:  red;
+			outline-color: red;
+		}
+
+		@media (hover:hover) {
+			cursor: pointer;
+		}
 	}
 `;

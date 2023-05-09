@@ -3,7 +3,7 @@ import petDefault from './../../../assets/pet-default.svg';
 
 function PetCard({ pet }) {
 
-	const { name, petAdoptionStatus } = pet;
+	const { image, name, petAdoptionStatus } = pet;
 
 	return (
 
