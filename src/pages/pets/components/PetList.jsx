@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getPets } from './../services/pets.service.js';
 import Loader from './../../../components/loader/Loader.jsx';
 import PetCard from './PetCard.jsx';
-import { PetSection } from './../styles/Pets.style.js';
+import { CardsList } from './../../styles/CardsList.style.js';
 
 function PetList() {
 
@@ -11,10 +11,9 @@ function PetList() {
 		queryFn: getPets
 	});
 
-	console.log(data)
 	return (
 
-		<PetSection>
+		<CardsList>
 
 			{(() => { 
 
@@ -33,7 +32,8 @@ function PetList() {
 
 			})()}
 
-		</PetSection>
+		</CardsList>
+
 	);
 };
 

@@ -1,4 +1,4 @@
-import { Card } from './../styles/PetCard.style.js';
+import { Card } from './../../styles/Card.style.js';
 import petDefault from './../../../assets/pet-default.svg';
 
 function PetCard({ pet }) {
