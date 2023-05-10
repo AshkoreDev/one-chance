@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Modal = styled.form`
 	width: 300px;
-	// margin: 10px auto;
+	margin: 0 auto;
 	padding: 10px;
 	text-align: center;
 	outline: 1px solid grey;
@@ -22,7 +22,9 @@ export const Modal = styled.form`
 	}
 
 	@media screen and (min-width: 768px) {
-		width: 650px;
+		& {
+			width: 650px;
+		}
 	}
 `;
 
@@ -57,7 +59,10 @@ export const ImageContainer = styled.figure`
 			font-size: 1.15rem;
 
 			@media (hover:hover) {
-				cursor: pointer;
+				&:hover {
+					cursor: pointer;
+					opacity: 0.6;
+				}
 			}
 		}
 	}
@@ -110,8 +115,9 @@ export const ButtonContainer = styled.div`
 			outline-color: red;
 		}
 
-		@media (hover:hover) {
+		&:hover {
 			cursor: pointer;
+			opacity: 0.6;
 		}
 	}
 `;

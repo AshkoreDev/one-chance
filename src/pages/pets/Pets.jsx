@@ -9,7 +9,7 @@ function Pets() {
 
 		<section className="content">
 			{/*<NewButton title="Animales"/>*/}
-			{/*<PetModal title="Agregar nueva mascota" send={true}/>*/}
+			{<PetModal title="Agregar nueva mascota" send={true}/>}
 			<PetList/>
 			{/*{<PetDetails/>}*/}
 		</section>
