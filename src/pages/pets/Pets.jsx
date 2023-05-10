@@ -11,7 +11,7 @@ function Pets() {
 			{/*<NewButton title="Animales"/>*/}
 			{/*<PetModal title="Agregar nueva mascota" send={true}/>*/}
 			<PetList/>
-			{/*<PetDetails/>*/}
+			<PetDetails/>
 		</section>
 
 	);

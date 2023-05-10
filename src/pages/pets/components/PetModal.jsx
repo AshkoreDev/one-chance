@@ -26,7 +26,16 @@ function PetModal({ title, send }) {
 		const formData = new FormData(e.target);
 		const data = Object.fromEntries(formData);
 		console.log(data);
-		createPetFn.mutate({ ...data, image });
+
+		setTimeout(() => {
+
+			console.log('Cerrar modal');
+
+			for(let value of formData.entries()) {
+				formData.delete(value);				
+			}
+		}, 500);
+		// createPetFn.mutate({ ...data, image });
 	};
 
 	const handleImage = (e) => document.getElementById('image').click(e);
