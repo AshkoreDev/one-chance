@@ -111,10 +111,7 @@ function PetModal({ title, send }) {
 				{
 					(send)
 						? <button>Guardar</button>
-						: <>
-								<button>Modificar</button>
-								<button>Eliminar</button>
-							</>
+						: <button>Modificar</button>
 				}
 			</ButtonContainer>
 

@@ -1,10 +1,27 @@
 import { FaPen, FaTrash } from "react-icons/fa";
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { deletePet } from './../services/pets.service.js';
 import { Card } from './../../styles/Card.style.js';
+
 import petDefault from './../../../assets/pet-default.svg';
 
 function PetCard({ pet }) {
 
-	const { image, name, petAdoptionStatus } = pet;
+	const { petId, image, name, petAdoptionStatus } = pet;
+
+	const queryClient = useQueryClient();
+
+	const deletePetFn = useMutation({
+		mutationFn: deletePet,
+		onSuccess: () => { 
+			console.log('Eliminado');
+			queryClient.invalidateQueries('pets');
+		}
+	});
+
+	const handleDelete = () => {
+		deletePetFn.mutate(petId);
+	};
 
 	return (
 
@@ -13,10 +30,9 @@ function PetCard({ pet }) {
 			<div>
 				<p>{name}</p>
 				<p>{petAdoptionStatus.title}</p>
-				{/*<a href="#">Detalles</a>*/}
 				<div>
 					<button title="Editar"><FaPen/></button>
-				  <button title="Eliminar"><FaTrash/></button>
+				  <button title="Eliminar" onClick={handleDelete}><FaTrash/></button>
 				</div>
 			</div>
 		</Card>
