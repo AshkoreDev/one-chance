@@ -12,7 +12,7 @@ function PetModal({ title, send }) {
 
 	const queryClient = useQueryClient();
 
-	const addPet = useMutation({
+	const createPetFn = useMutation({
 		mutationFn: createPet,
 		onSuccess: () => { 
 			console.log('enviado');
@@ -26,7 +26,7 @@ function PetModal({ title, send }) {
 		const formData = new FormData(e.target);
 		const data = Object.fromEntries(formData);
 		console.log(data);
-		addPet.mutate({ ...data, image });
+		createPetFn.mutate({ ...data, image });
 	};
 
 	const handleImage = (e) => document.getElementById('image').click(e);
