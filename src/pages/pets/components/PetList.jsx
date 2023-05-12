@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getPets } from './../services/pets.service.js';
 import Loader from './../../../components/loader/Loader.jsx';
@@ -6,9 +7,11 @@ import { CardsList } from './../../styles/CardsList.style.js';
 
 function PetList() {
 
+	const [errorMessage, setErrorMessage] = useState('');
 	const { data, isLoading, isError } = useQuery({
 		queryKey: ['pets'],
-		queryFn: getPets
+		queryFn: getPets,
+		onError: (data) => setErrorMessage(data.response.data.message)
 	});
 
 	return (
