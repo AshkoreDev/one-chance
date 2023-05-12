@@ -26,7 +26,7 @@ function PetList() {
 
 				} else if(isError) {
 
-					return <Loader title="Error en la base de datos"/>
+					return <Loader title={errorMessage}/>
 
 				} else {
 
