@@ -9,9 +9,9 @@ const adoptersAPI = axios.create({
 export const getAdopters = async () => {
 
 	const res = await adoptersAPI.get('/');
-	const pets = res.data;
+	const adopters = res.data;
 	
-	return pets;
+	return adopters;
 };
 
 export const createAdopter = async (data) => {

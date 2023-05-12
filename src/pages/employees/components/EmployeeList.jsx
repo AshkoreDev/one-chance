@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-// import { getEmployees } from './../services/employees.service.js';
+import { getEmployees } from './../services/employees.service.js';
 import Loader from './../../../components/loader/Loader.jsx';
 import EmployeeCard from './EmployeeCard.jsx';
 import { CardsList } from './../../styles/CardsList.style.js';
