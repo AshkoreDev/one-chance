@@ -1,6 +1,6 @@
 import { FaPen, FaTrash } from "react-icons/fa";
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-
+import { deleteAdopter } from './../services/adopters.service.js';
 import { Card } from './../../styles/Card.style.js';
 
 import userDefault from './../../../assets/user-default.svg';
@@ -8,6 +8,20 @@ import userDefault from './../../../assets/user-default.svg';
 function AdopterCard({ adopter }) {
 	
 	const { adopterId, firstName, lastName, documentType, documentNumber } = adopter;
+
+	const queryClient = useQueryClient();
+
+	const deleteAdopterFn = useMutation({
+		mutationFn: deleteAdopter,
+		onSuccess: () => { 
+			console.log('Eliminado');
+			queryClient.invalidateQueries('adopters');
+		}
+	});
+
+	const handleDelete = () => {
+		deleteAdopterFn.mutate(adopterId);
+	};
 
 	return (
 
@@ -18,7 +32,7 @@ function AdopterCard({ adopter }) {
 				<p>{`${documentType} ${documentNumber}`}</p>
 				<div>
 					<button title="Editar"><FaPen/></button>
-				  {/*<button title="Eliminar" onClick={handleDelete}><FaTrash/></button>*/}
+				  <button title="Eliminar" onClick={handleDelete}><FaTrash/></button>
 				</div>
 			</div>
 		</Card>
