@@ -1,36 +1,31 @@
 import axios from 'axios';
-import { API } from './../../api.js';
+import { adoptersEndpoint } from './../../api.js';
 
 const adoptersAPI = axios.create({
-	baseURL: `${API}adopters`
+	baseURL: `${adoptersEndpoint}`
 });
 
 
 export const getAdopters = async () => {
 
 	const res = await adoptersAPI.get('/');
-	const adopters = res.data;
-	
-	return adopters;
+	return res.data;
 };
 
 export const createAdopter = async (data) => {
 
 	const res = await adoptersAPI.post('/', data);
-	const adopter = res.data;
-	console.log('create: ', adopter);
+	return res.data;
 };
 
 export const updateAdopter = async (data) => {
 
 	const res = await adoptersAPI.patch(`/${id}`, data);
-	const adopter = res.data;
-	console.log('update: ', adopter);
+	return res.data;
 };
 
 export const deleteAdopter = async (id) => {
 
 	const res = await adoptersAPI.delete(`/${id}`);
-	const adopter = res.data;
-	console.log('delete: ', adopter);
+	return res.data;
 };

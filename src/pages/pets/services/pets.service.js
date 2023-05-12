@@ -1,36 +1,31 @@
 import axios from 'axios';
-import { API } from './../../api.js';
+import { petsEndpoint } from './../../api.js';
 
 const petsAPI = axios.create({
-	baseURL: `${API}pets`
+	baseURL: `${petsEndpoint}`
 });
 
 
 export const getPets = async () => {
 
 	const res = await petsAPI.get('/');
-	const pets = res.data;
-	
-	return pets;
+	return res.data;
 };
 
 export const createPet = async (data) => {
 
 	const res = await petsAPI.post('/', data);
-	const pet = res.data;
-	console.log('create: ', pet);
+	return res.data;
 };
 
 export const updatePet = async (data) => {
 
 	const res = await petsAPI.patch(`/${id}`, data);
-	const pet = res.data;
-	console.log('update: ', pet);
+	return res.data;
 };
 
 export const deletePet = async (id) => {
 
 	const res = await petsAPI.delete(`/${id}`);
-	const pet = res.data;
-	console.log('delete: ', pet);
+	return res.data;
 };

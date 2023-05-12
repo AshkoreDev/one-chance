@@ -1,36 +1,31 @@
 import axios from 'axios';
-import { API } from './../../api.js';
+import { employeesEndpoint } from './../../api.js';
 
 const employeesAPI = axios.create({
-	baseURL: `${API}employees`
+	baseURL: `${employeesEndpoint}`
 });
 
 
 export const getEmployees = async () => {
 
 	const res = await employeesAPI.get('/');
-	const employees = res.data;
-	
-	return employees;
+	return res.data;
 };
 
 export const createEmployee = async (data) => {
 
 	const res = await employeesAPI.post('/', data);
-	const employee = res.data;
-	console.log('create: ', employee);
+	return res.data;
 };
 
 export const updateEmployee = async (data) => {
 
 	const res = await employeesAPI.patch(`/${id}`, data);
-	const employee = res.data;
-	console.log('update: ', employee);
+	return res.data;
 };
 
 export const deleteEmployee = async (id) => {
 
 	const res = await employeesAPI.delete(`/${id}`);
-	const employee = res.data;
-	console.log('delete: ', employee);
+	return res.data;
 };
