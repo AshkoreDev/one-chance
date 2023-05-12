@@ -68,44 +68,12 @@ function MenuBar() {
           <span>Usuarios</span>
         </li>
 
-        {/*<li>
-          <Link to="#">
-            <span>  </span>
-            <p>Roles</p>
-          </Link>
-          <span>Roles</span>
-        </li>
-
         <li>
-          <Link to="#">
-            <span>   </span>
-            <p>Especies</p>
-          </Link>
-          <span>Especies</span>
-        </li>
-
-        <li>
-          <Link to="#">
-            <span>   </span>
-            <p>Razas</p>
-          </Link>
-          <span>Razas</span>
-        </li>
-
-        <li>
-          <Link to="#">
-            <span></span>
-            <p>Estatus</p>
-          </Link>
-          <span>Estatus</span>
-        </li>
-      */}
-        <li>
-          <Link to="profile">
+          <Link to="/settings">
             <span> <FaUserCog/> </span>
-            <p>Perfil</p>
+            <p>Configuración</p>
           </Link>
-          <span>Perfil</span>
+          <span>Configuración</span>
         </li>
 
         <li>

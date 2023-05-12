@@ -16,10 +16,10 @@ function App() {
       	<Route path="/" component={Home}/>
       	<Route path="/pets" component={Pets}/>
       	<Route path="/adopters" component={Adopters}/>
-      	{<Route path="/employees" component={Employees}/>}
-      	{/*<Route path="/users" component={'users'}/>*/}
-      	{/*<Route path="/profile" component={'profile'}/>*/}
-      	{/*<Route path="/:rest*" component={'ErrorPage'}/>}}*/}
+      	<Route path="/employees" component={Employees}/>
+      	{/*<Route path="/users" component={Users}/>*/}
+      	{/*<Route path="/profile" component={Settings}/>*/}
+      	{/*<Route path="/:rest*" component={ErrorPage}/>*/}
       </Switch>
     </>
 
