@@ -22,9 +22,7 @@ function AdopterCard({ adopter }) {
 		}
 	});
 
-	const handleDelete = () => {
-		deleteAdopterFn.mutate(adopterId);
-	};
+	const handleDelete = () => deleteAdopterFn.mutate(adopterId);
 
 	return (
 

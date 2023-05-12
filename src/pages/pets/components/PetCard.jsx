@@ -19,9 +19,7 @@ function PetCard({ pet }) {
 		}
 	});
 
-	const handleDelete = () => {
-		deletePetFn.mutate(petId);
-	};
+	const handleDelete = () => deletePetFn.mutate(petId);
 
 	return (
 
