@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getAdopters } from './../services/adopters.service.js';
 import Loader from './../../../components/loader/Loader.jsx';
@@ -6,9 +7,12 @@ import { CardsList } from './../../styles/CardsList.style.js';
 
 function AdopterList() {
 
+	const [errorMessage, setErrorMessage] = useState('');
+
 	const { data, isLoading, isError } = useQuery({
 		queryKey: ['adopters'],
-		queryFn: getAdopters
+		queryFn: getAdopters,
+		onError: (data) => setErrorMessage(data.response.data.message)
 	});
 
 	return (
@@ -23,7 +27,7 @@ function AdopterList() {
 
 				} else if(isError) {
 
-					return <Loader title="Error en la base de datos"/>
+					return <Loader title={errorMessage}/>
 
 				} else {
 

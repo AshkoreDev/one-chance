@@ -7,4 +7,13 @@ export const LoaderSection = styled.section`
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
+
+	@media screen and (min-width: 768px) {
+		width: 400px;
+	}
+
+	& > h2 {
+		font-size: 1.3rem;
+		text-align: center;
+	}
 `;

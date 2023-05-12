@@ -16,6 +16,9 @@ function AdopterCard({ adopter }) {
 		onSuccess: () => { 
 			console.log('Eliminado');
 			queryClient.invalidateQueries('adopters');
+		},
+		onError: (data) => {
+			console.log(data)
 		}
 	});
 
