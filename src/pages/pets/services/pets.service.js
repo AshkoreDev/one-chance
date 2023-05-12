@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const API = `http://localhost:3200/api/v1/`;
+import { API } from './../../api.js';
 
 const petsAPI = axios.create({
 	baseURL: `${API}pets`

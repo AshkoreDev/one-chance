@@ -16,7 +16,11 @@ function PetModal({ title, send }) {
 		mutationFn: createPet,
 		onSuccess: () => { 
 			console.log('enviado');
+			console.log('Cerrar modal');
 			queryClient.invalidateQueries('pets');
+		},
+		onError: () => {
+			console.log('error');
 		}
 	});
 
@@ -27,15 +31,15 @@ function PetModal({ title, send }) {
 		const data = Object.fromEntries(formData);
 		console.log(data);
 
-		setTimeout(() => {
+		// setTimeout(() => {
 
-			console.log('Cerrar modal');
+		// 	console.log('Cerrar modal');
 
-			for(let value of formData.entries()) {
-				formData.delete(value);				
-			}
-		}, 500);
-		// createPetFn.mutate({ ...data, image });
+		// 	for(let value of formData.entries()) {
+		// 		formData.delete(value);				
+		// 	}
+		// }, 500);
+		 // createPetFn.mutate({ ...data, image });
 	};
 
 	const handleImage = (e) => document.getElementById('image').click(e);
