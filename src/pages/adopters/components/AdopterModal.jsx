@@ -5,7 +5,7 @@ import { Modal, ImageContainer, InputGroup, ButtonContainer } from './../../styl
 
 import userDefault from './../../../assets/user-default.svg';
 
-function PetModal({ title, create }) {
+function AdopterModal({ title, create }) {
 
 	const [image, setImage] = useState(userDefault);
 
@@ -92,17 +92,15 @@ function PetModal({ title, create }) {
 					<textarea id="address" name="address"></textarea>
 				</InputGroup>
 
-				<fieldset>
-					<legend>Estatus</legend>
-					<div>
-						<label htmlFor="activo">Aprobado</label>
-						<input type="radio" id="activo" name="status" value="A"/>
-						<label htmlFor="inactivo">Rechazado</label>
-					 	<input type="radio" id="inactivo" name="status" value="R"/>
-					 	<label htmlFor="inactivo">En observación</label>
-					 	<input type="radio" id="inactivo" name="status" value="O"/>
-					</div>
-				</fieldset>
+				<InputGroup>
+					<label htmlFor="status">Estatus</label>
+					<select name="status" id="status">
+						<option></option>
+						<option value="A">Aprobado</option>
+						<option value="R">Rechazado</option>
+						<option value="O">En observación</option>
+					</select>
+				</InputGroup>
 
 				<fieldset>
 					<legend>Activo</legend>
@@ -129,4 +127,4 @@ function PetModal({ title, create }) {
 	);
 };
 
-export default PetModal;
+export default AdopterModal;
