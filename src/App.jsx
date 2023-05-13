@@ -5,6 +5,7 @@ import Pets from './pages/pets/Pets.jsx';
 import Adopters from './pages/adopters/Adopters.jsx';
 import Employees from './pages/employees/Employees.jsx';
 import Users from './pages/users/Users.jsx';
+import ErrorPage from './pages/errorPage/ErrorPage.jsx';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
       	<Route path="/employees" component={Employees}/>
       	<Route path="/users" component={Users}/>
       	{/*<Route path="/profile" component={Settings}/>*/}
-      	{/*<Route path="/:rest*" component={ErrorPage}/>*/}
+      	<Route path="/:rest*" component={ErrorPage}/>
       </Switch>
     </>
 
