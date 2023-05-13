@@ -21,7 +21,7 @@ export const Modal = styled.form`
     border-bottom: 1px solid grey;
 
     & > fieldset {
-    	width: 100%;
+    	width: 280px;
     	padding: 8px;
     	display: flex;
     	align-items: center;
@@ -36,7 +36,7 @@ export const Modal = styled.form`
 			}
 
 			& input {
-				margin: 0 20px 0 5px;;
+				margin: 0 15px 0 5px;
 			}
     }
 	}

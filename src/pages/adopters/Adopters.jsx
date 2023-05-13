@@ -1,4 +1,5 @@
 import AdopterList from './components/AdopterList.jsx';
+import AdopterModal from './components/AdopterModal.jsx';
 
 
 function Adopters() {
@@ -6,7 +7,8 @@ function Adopters() {
 	return (
 
 		<section className="content">
-			<AdopterList/>
+			{/*<AdopterList/>*/}
+			<AdopterModal title="Agregar nuevo adoptante" create={true}/>
 		</section>
 
 	);

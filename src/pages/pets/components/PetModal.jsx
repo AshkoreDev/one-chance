@@ -6,7 +6,7 @@ import { Modal, ImageContainer, InputGroup, ButtonContainer } from './../../styl
 
 import petDefault from './../../../assets/pet-default.svg';
 
-function PetModal({ title, send }) {
+function PetModal({ title, create }) {
 
 	const [image, setImage] = useState(petDefault);
 
@@ -76,7 +76,7 @@ function PetModal({ title, send }) {
 				</InputGroup>
 
 				<fieldset>
-					<legend>Sexo:</legend>
+					<legend>Sexo</legend>
 					<div>
 						<label htmlFor="hembra">Hembra</label>
 						<input type="radio" id="hembra" name="sex" value="M"/>
@@ -116,7 +116,7 @@ function PetModal({ title, send }) {
 				</InputGroup>
 
 				<fieldset>
-					<legend>Activo:</legend>
+					<legend>Activo</legend>
 					<div>
 						<label htmlFor="activo">Activo</label>
 						<input type="radio" id="activo" name="active" value="A"/>
@@ -129,7 +129,7 @@ function PetModal({ title, send }) {
 
 			<ButtonContainer>
 				{
-					(send)
+					(create)
 						? <button>Guardar</button>
 						: <button>Modificar</button>
 				}
