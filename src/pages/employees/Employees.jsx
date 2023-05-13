@@ -1,4 +1,5 @@
 import EmployeeList from './components/EmployeeList.jsx';
+import EmployeeModal from './components/EmployeeModal.jsx';
 
 
 function Employees() {
@@ -6,7 +7,8 @@ function Employees() {
 	return (
 
 		<section className="content">
-			<EmployeeList/>
+			{/*<EmployeeList/>*/}
+			<EmployeeModal title="Agregar nuevo empleado" create={true}/>
 		</section>
 
 	);

@@ -8,9 +8,9 @@ function Pets() {
 	return (
 
 		<section className="content">
-			{/*<NewButton title="Animales"/>*/}
+			{/*<NewButton title="Mascotas"/>*/}
 			<PetModal title="Agregar nueva mascota" create={true}/>
-			<PetList/>
+			{/*<PetList/>*/}
 			{/*<PetDetails/>*/}
 		</section>
 
