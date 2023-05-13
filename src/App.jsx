@@ -4,6 +4,7 @@ import Home from './pages/home/Home.jsx';
 import Pets from './pages/pets/Pets.jsx';
 import Adopters from './pages/adopters/Adopters.jsx';
 import Employees from './pages/employees/Employees.jsx';
+import Users from './pages/users/Users.jsx';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       	<Route path="/pets" component={Pets}/>
       	<Route path="/adopters" component={Adopters}/>
       	<Route path="/employees" component={Employees}/>
-      	{/*<Route path="/users" component={Users}/>*/}
+      	<Route path="/users" component={Users}/>
       	{/*<Route path="/profile" component={Settings}/>*/}
       	{/*<Route path="/:rest*" component={ErrorPage}/>*/}
       </Switch>
