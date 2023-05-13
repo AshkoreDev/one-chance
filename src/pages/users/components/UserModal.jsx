@@ -26,7 +26,7 @@ function UserModal({ title, create }) {
 			<h2>{title}</h2>
 				
 			<section>
-				<ImageContainer>
+				{/*<ImageContainer>
 					<img src={image} alt="" width="100" height="100"/>
 					<div>
 						<FaCamera onClick={handleImage}/>
@@ -34,7 +34,7 @@ function UserModal({ title, create }) {
 						<input type="file" id="image" name="image" accept="image/*" onChange={handleChangeImage}/>
 					</div>
 				</ImageContainer>
-
+*/}
 				<InputGroup>
 					<label htmlFor="email">Correo</label>
 					<input type="email" id="email" name="email" autoFocus={true} autoComplete="off"/>

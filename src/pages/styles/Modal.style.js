@@ -105,6 +105,10 @@ export const InputGroup = styled.div`
 		border: 1px solid grey;
 	}
 
+	& > #username {
+		text-transform: uppercase;
+	}
+
 	& > textarea {
 		resize: none;
 		height: 60px;
@@ -112,6 +116,8 @@ export const InputGroup = styled.div`
 		border-radius: 4px;
 		border: 1px solid grey;
 	}
+
+	
 `;
 
 export const ButtonContainer = styled.div`
