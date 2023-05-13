@@ -75,10 +75,15 @@ function PetModal({ title, send }) {
 					<input type="text" id="age" name="age" autoComplete="off"/>
 				</InputGroup>
 
-				<InputGroup>
-					<label htmlFor="sex">Sexo</label>
-					<input type="text" id="sex" name="sex" autoComplete="off"/>
-				</InputGroup>
+				<fieldset>
+					<legend>Sexo:</legend>
+					<div>
+						<label htmlFor="hembra">Hembra</label>
+						<input type="radio" id="hembra" name="sex" value="M"/>
+						<label htmlFor="macho">Macho</label>
+					 	<input type="radio" id="macho" name="sex" value="H"/>
+					</div>
+				</fieldset>
 
 				<InputGroup>
 					<label htmlFor="specieId">Especie</label>
@@ -110,13 +115,15 @@ function PetModal({ title, send }) {
 					<input type="number" id="adoptionStatusId" name="adoptionStatusId" autoComplete="off"/>
 				</InputGroup>
 
-				<InputGroup>
-					<label htmlFor="active">Activo</label>
-					<select id="active" name="active">
-						<option value="A">Activo</option>
-						<option value="I">Inactivo</option>
-					</select>
-				</InputGroup>
+				<fieldset>
+					<legend>Activo:</legend>
+					<div>
+						<label htmlFor="activo">Activo</label>
+						<input type="radio" id="activo" name="active" value="A"/>
+						<label htmlFor="inactivo">Inactivo</label>
+					 	<input type="radio" id="inactivo" name="active" value="I"/>
+					</div>
+				</fieldset>
 
 			</section>
 

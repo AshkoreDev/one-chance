@@ -19,6 +19,26 @@ export const Modal = styled.form`
 		justify-content: space-between;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+
+    & > fieldset {
+    	width: 100%;
+    	padding: 8px;
+    	display: flex;
+    	align-items: center;
+			justify-content: center;
+    	border-radius: 4px;
+    	border: 1px solid grey;
+
+			& > legend {
+				padding: 0 10px;
+				font-weight: 600;
+				text-align: start;
+			}
+
+			& input {
+				margin: 0 20px 0 5px;;
+			}
+    }
 	}
 
 	@media screen and (min-width: 768px) {
