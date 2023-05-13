@@ -1,11 +1,13 @@
 import UserList from './components/UserList.jsx';
+import UserModal from './components/UserModal.jsx';
 
 function Users() {
 
 	return (
 
 		<section className="content">
-			<UserList/>
+			{/*<UserList/>*/}
+			<UserModal title="Agregar nuevo usuario" create={true}/>
 		</section>
 
 	);
