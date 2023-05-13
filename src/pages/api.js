@@ -19,4 +19,4 @@ export const petsEndpoint = `${API}/pets`;
 
 // export const speciesEndpoint = `${API}/species`;
 
-// export const usersEndpoint = `${API}/users`;
+export const usersEndpoint = `${API}/users`;
