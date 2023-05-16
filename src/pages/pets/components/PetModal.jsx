@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaCamera } from 'react-icons/fa';
+import { validateData } from './../validateData.js';
 import { useSendPetData } from './../functions.js';
 import { Modal, ImageContainer, InputGroup, ButtonContainer } from './../../styles/Modal.style.js';
 
@@ -16,8 +17,11 @@ function PetModal({ title, create }) {
 		const formData = new FormData(e.target);
 		const data = Object.fromEntries(formData);
 		console.log(data);
+		const newData = validateData(data);
 
-		(create) ? sendData({ ...data, image }) : console.log('modificar');
+		console.log('newData ', newData);
+
+		(create) ? sendData({ ...newData, image }) : console.log('modificar');
 		
 		// setTimeout(() => {
 
@@ -27,7 +31,7 @@ function PetModal({ title, create }) {
 		// 		formData.delete(value);				
 		// 	}
 		// }, 500);
-		 // createPetFn.mutate({ ...data, image });
+		 // createPetFn.mutate({ ...newData, image });
 	};
 
 	const handleImage = (e) => document.getElementById('image').click(e);
