@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { FaCamera } from 'react-icons/fa';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { createPet } from './../services/pets.service.js';
+import { useSendPetData } from './../functions.js';
 import { Modal, ImageContainer, InputGroup, ButtonContainer } from './../../styles/Modal.style.js';
 
 import petDefault from './../../../assets/pet-default.svg';
@@ -9,20 +8,7 @@ import petDefault from './../../../assets/pet-default.svg';
 function PetModal({ title, create }) {
 
 	const [image, setImage] = useState(petDefault);
-
-	const queryClient = useQueryClient();
-
-	const createPetFn = useMutation({
-		mutationFn: createPet,
-		onSuccess: () => { 
-			console.log('enviado');
-			console.log('Cerrar modal');
-			queryClient.invalidateQueries('pets');
-		},
-		onError: () => {
-			console.log('error');
-		}
-	});
+	const { errorMessage, sendData } = useSendPetData();
 
 	const handleSubmit = (e) => {
 
@@ -31,6 +17,8 @@ function PetModal({ title, create }) {
 		const data = Object.fromEntries(formData);
 		console.log(data);
 
+		(create) ? sendData({ ...data, image }) : console.log('modificar');
+		
 		// setTimeout(() => {
 
 		// 	console.log('Cerrar modal');
