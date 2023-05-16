@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaCamera } from 'react-icons/fa';
-import { validateData } from './../validateData.js';
+import { validateData } from './../utils/validations.js';
 import { useSendPetData } from './../functions.js';
 import { Modal, ImageContainer, InputGroup, ButtonContainer } from './../../styles/Modal.style.js';
 
@@ -16,12 +16,17 @@ function PetModal({ title, create }) {
 		e.preventDefault();
 		const formData = new FormData(e.target);
 		const data = Object.fromEntries(formData);
-		console.log(data);
-		const newData = validateData(data);
+		// console.log(data);
+		const { newData, send } = validateData(data);
 
-		console.log('newData ', newData);
+		if (send) {
+			console.log('si');
+			console.log('newData ', newData);
 
-		(create) ? sendData({ ...newData, image }) : console.log('modificar');
+			(create) ? sendData({ ...newData, image }) : console.log('modificar');
+		}
+
+		
 		
 		// setTimeout(() => {
 

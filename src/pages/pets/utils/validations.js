@@ -1,5 +1,5 @@
 
-export const validateData = (data, changeImage, create) => {
+export const validateData = (data) => {
 
 	const { code, name, age, sex, specieId, breedId, currentHealth, currentMedicine, medicalHistory, adoptionStatusId, active } = data;
 
@@ -61,8 +61,9 @@ export const validateData = (data, changeImage, create) => {
 			medicalHistory: medicalHistory.trim(),
 			adoptionStatusId: adoptionStatusId.trim(),
 			active,
-		}
+		};
 
-		return newData;
+		const send = true;
+		return { newData, send };
 	}
 };

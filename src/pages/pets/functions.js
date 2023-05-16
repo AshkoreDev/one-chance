@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { createPet } from './services/pets.service.js';
+import { createPet } from './utils/services.js';
 
 export const useSendPetData = () => {
 
