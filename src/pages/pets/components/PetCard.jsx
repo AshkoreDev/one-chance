@@ -1,6 +1,6 @@
 import { FaPen, FaTrash } from "react-icons/fa";
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { deletePet } from './../services/pets.service.js';
+import { deletePet } from './../utils/services.js';
 import { Card } from './../../styles/Card.style.js';
 
 import petDefault from './../../../assets/pet-default.svg';

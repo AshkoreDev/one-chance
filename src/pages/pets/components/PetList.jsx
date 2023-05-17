@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getPets } from './../services/pets.service.js';
+import { getPets } from './../utils/services.js';
 import Loader from './../../../components/loader/Loader.jsx';
 import PetCard from './PetCard.jsx';
 import { CardsList } from './../../styles/CardsList.style.js';
