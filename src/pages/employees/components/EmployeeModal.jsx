@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaCamera } from 'react-icons/fa';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { validateData } from './../validation.js';
 import { Modal, ImageContainer, InputGroup, ButtonContainer } from './../../styles/Modal.style.js';
 
 import userDefault from './../../../assets/user-default.svg';
@@ -14,7 +14,8 @@ function EmployeeModal({ title, create }) {
 		e.preventDefault();
 		const formData = new FormData(e.target);
 		const data = Object.fromEntries(formData);
-		console.log(data);
+
+		validateData(data);
 	};
 
 	const handleImage = (e) => document.getElementById('image').click(e);
