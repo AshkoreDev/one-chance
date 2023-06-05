@@ -44,7 +44,7 @@ export const InfoContainer = styled.div`
     margin: 0 auto;
     font-size: 1.4rem;
     position: absolute;
-    left: 25px;
+    left: 28px;
     transition: 0.5s;
     transition-delay: 0s;
 
