@@ -39,9 +39,9 @@ function MenuBar() {
         <li>
           <Link to="/pets">
             <span> <FaDog/> </span>
-            <p>Animales</p>
+            <p>Mascotas</p>
           </Link>
-          <span>Animales</span>
+          <span>Mascotas</span>
         </li>
 
         <li>
