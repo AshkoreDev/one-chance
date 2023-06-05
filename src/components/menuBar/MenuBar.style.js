@@ -14,7 +14,7 @@ export const Menu = styled.section`
   transition: 0.8s;
 
   &.active {
-    width: 200px;
+    width: 250px;
   }
 `;
 
@@ -42,15 +42,15 @@ export const InfoContainer = styled.div`
 
   & svg {
     margin: 0 auto;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     position: absolute;
-    left: 30px;
+    left: 25px;
     transition: 0.5s;
     transition-delay: 0s;
 
     .active & {
-      margin: 0;
-      left: 160px;
+      left: 210px;
+      transition: 0.5s;
       transition-delay: 0.2s;
     }
   }
@@ -62,10 +62,11 @@ export const InfoContainer = styled.div`
 `;
 
 export const UserContainer = styled.div`
+  height: 83px;
   padding: 10px 5px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fff;
 
   & img {
     width: 50px;
@@ -83,12 +84,13 @@ export const UserContainer = styled.div`
       transition-delay: 0s;
 
       &:nth-child(1) {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 600;
       }
 
       &:nth-child(2) {
         letter-spacing: 1px;
+        color: #ccc;
       }
 
       .active & {
@@ -100,41 +102,34 @@ export const UserContainer = styled.div`
 `;
 
 export const ItemsContainer = styled.ul`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  padding: 0.65rem 0;
 
   & li {
     width: 90%;
-    height: 40px;
-    margin: 0 auto;
+    height: 50px;
+    margin: 0.8rem auto;
     position: relative;
     list-style: none;
+    line-height: 50px;
 
     & a {
       display: flex;
       align-items: center;
       color: #fff;
       text-decoration: none;
-      border-radius: 0.5rem;
+      border-radius: 0.8rem;
 
       & span {
-        min-width: 40px;
-        height: 40px;
-        padding: 8px 0;
-        margin-left: 5px;
+        min-width: 50px;
+        height: 50px;
+        padding: 2.5px 0;
         font-size: 1.5rem;
         text-align: center;
         border-radius: 12px;
       }
 
       & p {
-        height: 40px;
-        padding: 10px 0;
-        margin-left: 10px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         opacity: 0;
         transition-delay: 0s;
 
@@ -149,7 +144,7 @@ export const ItemsContainer = styled.ul`
       padding: .4rem 1.2rem;
       position: absolute;
       top: 50%;
-      left: 130px;
+      left: 140px;
       color: #fff;
       font-size: 1.1rem;
       font-weight: 500;
@@ -157,7 +152,7 @@ export const ItemsContainer = styled.ul`
       border-radius: .6rem;
       z-index: 20;
       opacity: 0;
-      transform: translate(-50%, -50%);
+      transform: translate(-40%, -50%);
       background: #41644A;
       box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2);
 

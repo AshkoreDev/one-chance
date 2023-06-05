@@ -31,11 +31,13 @@ body::-webkit-scrollbar-thumb {
 	position: relative;
 	top: 0;
 	left: 80px;
+  z-index: -1;
 	background: #C7E9B0;
-	transition: all 0.8s ease;
+	transition: all 0.5s ease;
 }
 
 .active ~ .content {
-	width: calc(100% - 200px);
-	left: 200px;
+  width: calc(100% - 250px);
+  left: 250px;
+  transition: 0.8s;
 }
